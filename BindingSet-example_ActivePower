@@ -2,12 +2,12 @@
     {
 		"dp": "<http://ontology.tno.nl/interconnect/forecast/activePower>",
 		"ct": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime>",
-        "tis": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime>",
-        "tie": "\"2021-04-29T15:02:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime>",
+        "tisv": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime>",
+        "tiev": "\"2021-04-29T15:02:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime>",
         "res_d": "0",
         "res_h": "0",
         "res_m": "0",
         "res_s": "2",
-		"nv": "\"1000.5\"^^<http://www.w3.org/2001/XMLSchema#double>"
+		"qapnv": "\"1000.5\"^^<http://www.w3.org/2001/XMLSchema#double>"
 	}
 ]
