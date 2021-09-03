@@ -1,0 +1,9 @@
+[
+    {
+            "dp": "<http://ontology.tno.nl/interconnect/forecast/control>",
+            "ct": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime>",
+            "tis": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime>",
+            "tie": "\"2021-04-29T16:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTime>",
+            "nv": "\"1000.0\"^^<http://www.w3.org/2001/XMLSchema#double>"
+    }
+]

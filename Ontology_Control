@@ -1,0 +1,22 @@
+// Control expresed as data point
+?dp rdf:type forecast:dataPoint .
+// Created time
+// Example: 2021-08-30T15:00:00Z 
+?dp forecast:hasCreationTime ?t
+?t time:inXSDDateTimeStamp ?ct .
+
+// Time interval of the data point
+// Example: 2021-08-30T15:00:00Z - 2021-08-30T16:00:00Z
+?dp forecast:hasTimeStamp ?ts
+?ts time:hasBeginning ?time_interval_start .
+?time_interval_start time:inXSDDateTimeStamp ?tis .
+?ts time:hasEnd ?time_interval_end .
+?time_interval_end time:inXSDDateTimeStamp ?tie .
+
+// Value of the active power in the interval in kW
+// Example: 1000 kW
+?dp forecast:hasQuantity ?q .
+?q rdf:type ic-units:ActivePower .
+?q om:hasValue ?v .
+?v om:hasUnit ic-units:kiloWatt .
+?v om:hasNumericalValue ?nv .
