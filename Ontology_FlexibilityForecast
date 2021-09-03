@@ -1,4 +1,4 @@
-# Baseline forecast expressed as timeSeries
+# Flexibility forecast expressed as timeSeries
 # TODO create specific timeseries, similarly as FlexibilityTimeseries. We could use BaselineForecastTimeseries
 ?forecast rdf:type forecast:pointForecast .
 
