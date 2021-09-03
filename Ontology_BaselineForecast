@@ -37,23 +37,15 @@
 
 # Time interval of the data point
 # Example: 2021-08-30T00:00:00Z - 2021-08-30T01:00:00Z
-?dp commodityUnitPriceDataPoint:hasTimeStamp ?ti
+?dp dataPoint:hasTimeStamp ?ti
 ?ti time:hasBeginning ?tis .
 ?tis time:inXSDDateTimeStamp ?tisv.
 ?ti time:hasEnd ?tie .
 ?tie time:inXSDDateTimeStamp ?tiev .
 # Value of the active power in the interval in kW
 # Example: 1000 kW
-?dp commodityUnitPriceDataPoint:hasQuantity ?qap .
+?dp dataPoint:hasQuantity ?qap .
 ?qap rdf:type ic-units:ActivePower .
 ?qap om:hasValue ?qapv .
 ?qapv om:hasUnit ic-units:kiloWatt .
 ?qapv om:hasNumericalValue ?qapnv .
-# Value of the energy price in the interval in MW/kWh
-# Example: 200 EUR/MWh
-?dp commodityUnitPriceDataPoint:hasUnitPrice ?qep .
-# Do we need this?
-?qep rdf:type ic-units:EuroPerMegawattHour .
-?qep om:hasValue ?qepv .
-?qepv om:hasUnit ic-units:euroPerMegawattHour .
-?qepv om:hasNumericalValue ?qepnv .
