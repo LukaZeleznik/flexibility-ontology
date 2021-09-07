@@ -4,12 +4,14 @@
 
 # Created time
 # Example: 2021-08-30T15:00:00Z 
-?forecast pointForecast:hasCreationTime ?ct
+?forecast forecast:hasCreationTime ?ct .
+?ct rdf:type time:Instant . 
 ?ct time:inXSDDateTimeStamp ?ctv .
 
 ?forecast forecast:isExpressedAs ?ts 
 # Array of data points representing interval of active power, e.g for hourly interval in the day - 24 points
-?ts pointForecast:hasSeriesOfDataPoint ?dp .
+?ts forecast:hasSeriesOfDataPoint ?dp .
+?ts rdf:type forecast:timeSeries .
 
 # Time interval for the entire timeseries (all points)
 # Example: 2021-08-30T00:00:00Z - 2021-08-31T00:00:00Z
@@ -37,7 +39,7 @@
 
 # Time interval of the data point
 # Example: 2021-08-30T00:00:00Z - 2021-08-30T01:00:00Z
-?dp dataPoint:hasTimeStamp ?ti
+?dp forecast:hasTimeStamp ?ti
 ?ti time:hasBeginning ?tis .
 ?tis time:inXSDDateTimeStamp ?tisv.
 ?ti time:hasEnd ?tie .

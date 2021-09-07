@@ -4,12 +4,14 @@
 
 # Created time
 # Example: 2021-08-30T15:00:00Z 
-?forecast pointForecast:hasCreationTime ?ct
+?forecast forecast:hasCreationTime ?ct .
+?ct rdf:type time:Instant . 
 ?ct time:inXSDDateTimeStamp ?ctv .
 
 ?forecast forecast:isExpressedAs ?ts 
 # Array of data points representing interval of active power, e.g for hourly interval in the day - 24 points
-?ts pointForecast:hasSeriesOfDataPoint ?dp .
+?ts forecast:hasSeriesOfDataPoint ?dp .
+?ts rdf:type forecast:timeSeries .
 
 # Time interval for the entire timeseries (all points)
 # Example: 2021-08-30T00:00:00Z - 2021-08-31T00:00:00Z
@@ -37,30 +39,29 @@
 
 # Time interval of the data point
 # Example: 2021-08-30T00:00:00Z - 2021-08-30T01:00:00Z
-?dp baseMinMaxDataPoint:hasTimeStamp ?ti
+?dp rdf:type forecast:baseMinMaxDataPoint .
+?dp forecast:hasTimeStamp ?ti
 ?ti time:hasBeginning ?tis .
 ?tis time:inXSDDateTimeStamp ?tisv.
 ?ti time:hasEnd ?tie .
 ?tie time:inXSDDateTimeStamp ?tiev .
 # Flexibility envalope of the active power in the interval [kW]
-# Max, min and energy price
+# Max, min and  baseline
 # Example: Max 1000 kW
-?dp baseMinMaxDataPoint:hasMax ?max .
+?dp forecast:hasMax ?max .
 ?max rdf:type ic-units:ActivePower .
 ?max om:hasValue ?maxv .
 ?maxv om:hasUnit ic-units:kiloWatt .
 ?maxv om:hasNumericalValue ?maxnv .
 # Example: Min 0 kW
-?dp baseMinMaxDataPoint:hasMin ?min .
+?dp forecast:hasMin ?min .
 ?min rdf:type ic-units:ActivePower .
 ?min om:hasValue ?minv .
 ?minv om:hasUnit ic-units:kiloWatt .
 ?minv om:hasNumericalValue ?minnv .
-# Value of the energy price in the interval in MW/kWh
-# Example: 200 EUR/MWh
-?dp baseMinMaxDataPoint:hasQuantity ?qep .
-# Do we need this?
-?qep rdf:type ic-units:EuroPerMegawattHour .
-?qep om:hasValue ?qepv .
-?qepv om:hasUnit ic-units:euroPerMegawattHour .
-?qepv om:hasNumericalValue ?qepnv .
+# Value of the baseline forecast in kW
+?dp forecast:hasQuantity ?qep .
+?qb rdf:type ic-units:ActivePower .
+?qb om:hasValue ?qbv .
+?qbv om:hasUnit ic-units:kiloWatt .
+?qbv om:hasNumericalValue ?qbnv .

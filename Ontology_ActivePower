@@ -3,7 +3,7 @@
 // Created time
 // Example: 2021-08-30T15:00:00Z 
 ?dp forecast:hasCreationTime ?t
-?t time:inXSDDateTimeStamp ?ct .
+?t time:inXSDDateTimeStamp ?ctv .
 
 // Time interval of the data point
 // Example: 2021-08-30T15:00:00Z - 2021-08-30T15:02:00Z
@@ -15,7 +15,7 @@
 
 // Update of entire timeseries
 // Example:  2s
-?dp time:hasUpdateRate ?update .
+?dp forecast:hasUpdateRate ?update .
 ?update time:days ?res_d .
 ?update time:hours ?res_h .
 ?update time:minutes ?res_m .
