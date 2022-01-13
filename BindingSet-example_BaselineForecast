@@ -1,7 +1,7 @@
 [
     {
-        "forecast": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56b6a7e535b9>"
-        "ctv" : "\"2021-04-29T00:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
+        "forecast": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56b6a7e535b9>",
+        "ctv": "\"2021-04-29T00:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
         "dp": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56b6a7e535b9/1>",
         "ftisv": "\"2021-04-29T00:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
         "ftiev": "\"2021-04-30T00:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
@@ -18,8 +18,8 @@
         "qapnv": "\"1000.5\"^^<http://www.w3.org/2001/XMLSchema#double>"
     },
     {
-        "forecast": "<http://ontology.tno.nl/interconnect/forecast/baselineForecast>"
-        "ctv" : "\"2021-04-29T00:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
+        "forecast": "<http://ontology.tno.nl/interconnect/forecast/baselineForecast>",
+        "ctv": "\"2021-04-29T00:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
         "dp": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56b6a7e535b9/2>",
         "ftisv": "\"2021-04-29T00:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
         "ftiev": "\"2021-04-30T00:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
