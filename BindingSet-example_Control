@@ -1,9 +1,10 @@
 [
     {
-            "dp": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56b6a7e535b9",
-            "ctv": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
-            "tisv": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
-            "tiev": "\"2021-04-29T16:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
-            "qapv": "\"1000.0\"^^<http://www.w3.org/2001/XMLSchema#double>"
+        "dp": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56b6a7e535b9/2021-04-29T15:00:00Z>",
+		"asset": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56b6a7e535b9>", 
+        "ctv": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
+        "tisv": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
+        "tiev": "\"2021-04-29T16:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
+        "qapv": "\"1000.0\"^^<http://www.w3.org/2001/XMLSchema#double>"
     }
 ]
