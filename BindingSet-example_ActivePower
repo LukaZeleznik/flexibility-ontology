@@ -1,13 +1,21 @@
 [
     {
-		"dp": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56b6a7e535b9>",
-		"ctv": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
+		"dp": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56b6a7e535b9/2021-04-29T15:00:00:00Z>",
+		"asset": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56b6a7e535b9>", 
+        "ctv": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
         "tisv": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
         "tiev": "\"2021-04-29T15:02:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
-        "res_d": "0",
-        "res_h": "0",
-        "res_m": "0",
         "res_s": "2",
 		"qapnv": "\"1000.5\"^^<http://www.w3.org/2001/XMLSchema#double>"
+	},
+
+    {
+		"dp": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56dsadsaasa/2021-04-29T15:00:00:00Z>",
+		"asset": "<http://api.3e.com/devices/e964ddc5-f6bf-44eb-82df-56dsadsaasa>",
+        "ctv": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
+        "tisv": "\"2021-04-29T15:00:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
+        "tiev": "\"2021-04-29T15:02:00Z\"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp>",
+        "res_s": "2",
+		"qapnv": "\"2000.5\"^^<http://www.w3.org/2001/XMLSchema#double>"
 	}
 ]

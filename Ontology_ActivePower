@@ -1,13 +1,17 @@
 // ActivePower expresed as data point
-?dp rdf:type forecast:dataPoint .
+?dp rdf:type ic-data:dataPoint .
+
+// Asset identifier
+?dp ic-tplg:hasTopologicalAssociation ?asset .
+
 // Created time
 // Example: 2021-08-30T15:00:00Z 
-?dp forecast:hasCreationTime ?t
+?dp ic-data:hasCreationTime ?t
 ?t time:inXSDDateTimeStamp ?ctv .
 
 // Time interval of the data point
 // Example: 2021-08-30T15:00:00Z - 2021-08-30T15:02:00Z
-?dp forecast:hasTimeStamp ?ti
+?dp ic-data:hasTimeStamp ?ti
 ?ti time:hasBeginning ?tis .
 ?tis time:inXSDDateTimeStamp ?tisv .
 ?ti time:hasEnd ?tie .
@@ -15,7 +19,7 @@
 
 // Update of entire timeseries
 // Example:  2s
-?dp forecast:hasUpdateRate ?update .
+?dp ic-data:hasUpdateRate ?update .
 ?update time:days ?res_d .
 ?update time:hours ?res_h .
 ?update time:minutes ?res_m .
@@ -23,7 +27,7 @@
 
 // Value of the active power in the interval in kW
 // Example: 1000 kW
-?dp forecast:hasQuantity ?qap .
+?dp ic-data:hasQuantity ?qap .
 ?qap rdf:type ic-units:ActivePower .
 ?qap om:hasValue ?qapv .
 ?qapv om:hasUnit ic-units:kiloWatt .

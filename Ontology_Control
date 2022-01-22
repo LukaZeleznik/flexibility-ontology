@@ -1,13 +1,20 @@
 // Control expresed as data point
-?dp rdf:type forecast:dataPoint .
+?dp rdf:type ic-data:dataPoint .
+
+// Asset identifier
+?dp ic-tplg:hasTopologicalAssociation ?asset .
+
+// usage - setpoint
+?dp ic-data:hasUsage ic-data:setPoint .
+
 // Created time
 // Example: 2021-08-30T15:00:00Z 
-?dp forecast:hasCreationTime ?ct
+?dp ic-data:hasCreationTime ?ct
 ?ct time:inXSDDateTimeStamp ?ctv .
 
 // Time interval of the data point
 // Example: 2021-08-30T15:00:00Z - 2021-08-30T16:00:00Z
-?dp forecast:hasTimeStamp ?ts
+?dp ic-data:hasTimeStamp ?ts
 ?ts time:hasBeginning ?tis .
 ?tis time:inXSDDateTimeStamp ?tisv .
 ?ts time:hasEnd ?tie .
@@ -15,7 +22,7 @@
 
 // Value of the active power in the interval in kW
 // Example: 1000 kW
-?dp forecast:hasQuantity ?qap .
+?dp ic-data:hasQuantity ?qap .
 ?qap rdf:type ic-units:ActivePower .
 ?qap om:hasValue ?qapv .
 ?qapv om:hasUnit ic-units:kiloWatt .
