@@ -3,10 +3,13 @@
 ?fc rdf:type ic-fc:PointForecast .
 
 //// usage - baseline
-?fc ic-data:hasUsage ic-data:baseline . // does baseline exists??
+?fc ic-data:hasUsage ic-data:baseLine . // does baseline exists??
 
 // Asset identifier
 ?fc ic-tplg:hasTopologicalAssociation ?asset .
+
+// Adding the asset as topological location (optional)
+?asset rdf:subClassOf ic-tplg:TopologicalLocation .
 
 // Created time
 // Example: 2021-08-30T15:00:00Z 

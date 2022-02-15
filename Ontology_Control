@@ -4,6 +4,9 @@
 // Asset identifier
 ?dp ic-tplg:hasTopologicalAssociation ?asset .
 
+// Adding the asset as topological location (optional)
+?asset rdf:subClassOf ic-tplg:TopologicalLocation .
+
 // usage - setpoint
 ?dp ic-data:hasUsage ic-data:setPoint .
 
