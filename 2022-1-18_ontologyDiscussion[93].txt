@@ -1,0 +1,33 @@
+
+
+?fc rdf:type ic-fc:point-forecast .
+
+
+<https://3e.com/forecasts/2022-18-1-12:00:00-adshfaduhfasd> rdf:type ic-fc:point-forecast .
+<https://3e.com/forecasts/2022-18-1-12:00:00-adshfaduhfasd> ic-fc:hasCreationTime <https://example.org/time-individual01231> .
+<https://example.org/time-individual01231> time:inXSDDateTimeStamp "2022-12-1-12:00:00" .
+
+...
+
+
+<https://www.cybergrid.com/data/time-series/adsfaer> ic-data:hasDataPoint <....dp1> .
+<https://www.cybergrid.com/data/time-series/adsfaer> ic-data:hasDataPoint <....dp2> .
+<https://www.cybergrid.com/data/time-series/adsfaer> ic-data:hasDataPoint <....dp3> .
+<https://www.cybergrid.com/data/time-series/adsfaer> ic-data:hasDataPoint <....dp4> .
+<https://www.cybergrid.com/data/time-series/adsfaer> ic-data:hasDataPoint <....dp5> .
+<https://www.cybergrid.com/data/time-series/adsfaer> ic-data:hasDataPoint <....dp6> .
+<https://www.cybergrid.com/data/time-series/adsfaer> ic-data:hasDataPoint <....dp7> .
+...
+
+?fc rdf:type ic-fc:PointForecast .
+?fc ic-fc:isExpressedAs ?ts .
+?ts ic-data:hasDataPoint ?dp .
+
+dp --> { <...dp1>, <...dp2>, ... }
+
+
+?qv om:hasUnit om:kiloWatt .
+
+
+
+

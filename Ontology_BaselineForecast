@@ -2,8 +2,8 @@
 // TODO create specific timeseries, similarly as FlexibilityTimeseries. We could use BaselineForecastTimeseries
 ?fc rdf:type ic-fc:PointForecast .
 
-//// usage - baseline
-?fc ic-data:hasUsage ic-data:baseLine . // does baseline exists??
+// usage - baseline
+?fc ic-data:hasUsage ic-data:baseLine . 
 
 // Asset identifier
 ?fc ic-tplg:hasTopologicalAssociation ?asset .
@@ -21,16 +21,16 @@
 // Array of data points representing interval of forecasted baseline, e.g for hourly interval in the day - 24 points
 ?ts rdf:type ic-data:TimeSeries .
 
-// Update of entire timeseries
-// Example:  1H - we receive 24 points (timeseries) every 1 H
+// Resolution of each point in timeseries
+// Example:  1H
 ?ts ic-data:hasUpdateRate ?update .
 ?update time:days ?up_d .
 ?update time:hours ?up_h .
 ?update time:minutes ?up_m .
 ?update time:seconds ?up_s .
 
-// Resolution of each point in timeseries
-// Example:  1H
+// Update of entire timeseries
+// Example:  1H - we receive 24 points (timeseries) every 1 H
 ?ts ic-data:hasTemporalResolution ?res .
 ?res time:days ?res_d .
 ?res time:hours ?res_h .
@@ -45,12 +45,12 @@
 ?tsp time:hasEnd ?tspe .
 ?tspe time:inXSDDateTimeStamp ?tspev .
 
-// Maybe add isExpresed as TrajectoriesForecast?? 
-// Do i need to again provide hasUsage and hasTopologicalAssociation for earch datapoint and timeseries
-
 // Time interval of the data point
 // Example: 2021-08-30T00:00:00Z - 2021-08-30T01:00:00Z
 ?ts ic-data:hasDataPoint ?dp .
+
+// usage - baseline
+?dp ic-data:hasUsage ic-data:baseLine . 
 
 // Time interval of the data point
 // Example: 2021-08-30T00:00:00Z - 2021-08-30T01:00:00Z
