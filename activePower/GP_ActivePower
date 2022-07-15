@@ -1,22 +1,22 @@
-// ActivePower expressed as a data point
+# ActivePower expressed as a data point
 ?dp rdf:type ic-data:DataPoint .
 
-// Asset identifier
+# Asset identifier
 ?asset rdf:type saref:Device .
 
-// Adding the asset as topological location (optional)
+# Adding the asset as topological location (optional)
 ?dp ic-tplg:hasToplogicalAssociation ?loc .
 ?loc rdf:type ic-tplg:TopologicalLocation .
 ?loc ic-tplg:isToplogicalAssociationOf ?asset .
 
-// Creation time
-// Example: 2021-08-30T15:00:00Z 
+# Creation time
+# Example: 2021-08-30T15:00:00Z 
 ?dp ic-data:hasCreationTime ?ct .
 ?ct rdf:type time:Instant .
 ?ct time:inXSDDateTimeStamp ?ctv .
 
-// Time interval of the data point
-// Example: 2021-08-30T15:00:00Z - 2021-08-30T15:00:02Z (this can be same as the start interval)
+# Time interval of the data point
+# Example: 2021-08-30T15:00:00Z - 2021-08-30T15:00:02Z (this can be same as the start interval)
 ?dp ic-data:hasEffectivePeriod ?ti .
 ?ti rdf:type time:Interval .
 ?ti time:hasBeginning ?tis .
@@ -24,8 +24,8 @@
 ?ti time:hasEnd ?tie .
 ?tie time:inXSDDateTimeStamp ?tiev .
 
-// Update rate
-// Example:  2s
+# Update rate
+# Example:  2s
 ?dp ic-data:hasUpdateRate ?update .
 ?update rdf:type time:DurationDescription .
 ?update time:days ?res_d .
@@ -33,8 +33,8 @@
 ?update time:minutes ?res_m  . 
 ?update time:seconds ?res_s . 
 
-// Value of the active power in the interval in kW
-// Example: 1000 kW
+# Value of the active power in the interval in kW
+# Example: 1000 kW
 ?dp ic-data:containsQuantity ?qap  .
 ?qap  rdf:type ic-uom:ActivePower .
 ?qap om:hasValue ?qapv .
