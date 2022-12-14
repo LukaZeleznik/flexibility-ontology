@@ -49,7 +49,7 @@
 ?dep rdf:type time:Interval .
 ?dep time:hasBeginning ?dpbeg .
 ?dpbeg time:inXSDDataTimeStamp ?dpbegts .
-?dep time:hasEnd ?dpend . 
+?dep time:hasEnd ?dpend .
 ?dpend  time:inXSDDataTimeStamp ?dpendts .
 
 # Definition of datapoints for active power values in the timeseries 
