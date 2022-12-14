@@ -44,6 +44,14 @@
 ?ts ic-data:hasUsage ic-data:baseLine .
 ?ts ic-data:hasDatapoint ?dp .
 
+# Definition of effective period of datapoint
+?dp ic-data:hasEffectivePeriod ?dep .
+?dep rdf:type time:Interval .
+?dep time:hasBeginning ?dpbeg .
+?dpbeg time:inXSDDataTimeStamp ?dpbegts .
+?dep time:hasEnd ?dpend . 
+?dpend  time:inXSDDataTimeStamp ?dpendts .
+
 # Definition of datapoints for active power values in the timeseries 
 ?dp ic-data:hasEffectivePeriod ?ep .
 ?dp ic-data:hasUpdateRate ?ur .
