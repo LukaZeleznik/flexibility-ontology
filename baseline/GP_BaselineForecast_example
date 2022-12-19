@@ -44,6 +44,14 @@
 ?ts <http://ontology.tno.nl/interconnect/datapoint#hasUsage> <http://ontology.tno.nl/interconnect/datapoint#baseLine> .
 ?ts <http://ontology.tno.nl/interconnect/datapoint#hasDatapoint> ?dp .
 
+# Definition of effective period of datapoint
+?dp <http://ontology.tno.nl/interconnect/datapoint#hasEffectivePeriod> ?dep .
+?dep <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Interval> .
+?dep <http://www.w3.org/2006/time#hasBeginning> ?dpbeg .
+?dpbeg <http://www.w3.org/2006/time#inXSDDataTimeStamp> ?dpbegts .
+?dep <http://www.w3.org/2006/time#hasEnd> ?dpend .
+?dpend <http://www.w3.org/2006/time#inXSDDataTimeStamp> ?dpendts .
+
 # Definition of datapoints for active power values in the timeseries 
 ?dp <http://ontology.tno.nl/interconnect/datapoint#hasEffectivePeriod> ?ep .
 ?dp <http://ontology.tno.nl/interconnect/datapoint#hasUpdateRate> ?ur .
